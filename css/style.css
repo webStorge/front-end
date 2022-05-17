@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+#header-center {
+    margin: 0 auto; 
+    width: 1080px;
+}
+
+#header-logo h1 {
+    width: 222px;
+    height: 52px;
+    display: inline-block;
+    background-image: url(../icon_images/logo.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+#header-logo a {
+    text-decoration: none;
+}
+
+#header-logo h1 span{
+    display: none;
+}
+
+#header-logo fieldset {
+    width: 521px;
+    height: 49px;
+    display: inline-block;
+    margin-left: 12px;
+    padding: 12px 0 12px 10px;
+    border: 2px solid #a2f8fc;
+    vertical-align: middle;
+    position: relative;
+}
+
+#header-logo fieldset input {
+    width: 444px;
+    height: 24px;
+    border: none;
+    padding: 0;
+    vertical-align: top;
+}
+
+#header-logo fieldset button {
+    width: 49px;
+    height: 49px;
+    border: none;
+    padding: 0;
+    background: #a2f8fc;
+    position:absolute;
+    right: -49px;
+    top: -2px;
+}
+
+#search-image {
+    width: 21px;
+    height: 21px;
+    background-image: url(../icon_images/sp_search.png);
+    background-position: -3px -60px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
