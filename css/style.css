@@ -65,10 +65,35 @@
 }
 
 #search-image {
-    width: 21px;
-    height: 21px;
+    width: 50px;
+    height: 49px;
     background-image: url(../icon_images/sp_search.png);
-    background-position: -3px -60px;
+    background-position: 10px 9px;
+    background-size: 30px;
     background-repeat: no-repeat;
     display: inline-block;
 }
+
+ .menu {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 160px;
+    background: #ededed;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+  }
+
+ .menu  li  a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    color: #000;
+    text-align: center;
+  }
+
+  .menu li a:hover {
+    font-weight: bold;   
+  }
+  
