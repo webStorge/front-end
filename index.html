@@ -1,3 +1,4 @@
+<?php include  $_SERVER['DOCUMENT_ROOT']."/real/php/db.php"; ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -85,7 +86,7 @@
   <!-- <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search"> -->
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" onclick="BtnClick('./login_cloud.html');">Sign out</a>
+      <a class="nav-link px-3" href="login_resist.html">Sign out</a>
     </div>
   </div>
 </header>
@@ -137,8 +138,9 @@
         <h1 class="h2">모든 파일</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">    
-            <button type="button" class="btn btn-sm btn-outline-secondary" onclick='newPageUpload()'>업로드</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary" onclick='newPageDownload()'>다운로드</button>
+            <input id="my-input" type="file" />
+            <button type="button" id="uploadBtn" class="btn btn-sm btn-outline-secondary" onclick='onClickUpload()'>&nbsp업로드&nbsp</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick='newPage("./download.html")'>다운로드</button>
           </div>
         </div>
       </div>
@@ -154,104 +156,21 @@
               <th scope="col">날짜</th>
             </tr>
           </thead>
-          <!-- <tbody>
-            <tr>
-              <td>1</td>
-              <td>random</td>
-              <td>MB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>placeholder</td>
-              <td>MB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>data</td>
-              <td>MB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>information</td>
-              <td>MB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>text</td>
-              <td>MB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>dashboard</td>
-              <td>MB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>dashboard</td>
-              <td>MB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>placeholder</td>
-              <td>MB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>random</td>
-              <td>MB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>placeholder</td>
-              <td>KB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td>data</td>
-              <td>KB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>12</td>
-              <td>information</td>
-              <td>KB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>13</td>
-              <td>text</td>
-              <td>GB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>14</td>
-              <td>dashboard</td>
-              <td>GB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>15</td>
-              <td>dashboard</td>
-              <td>KB</td>
-              <td>2022-05-18</td>
-            </tr>
-            <tr>
-              <td>16</td>
-              <td>random</td>
-              <td>KB</td>
-              <td>2022-05-18</td>
-            </tr>
-          </tbody> -->
+          <?php
+        	$sql = query("select * from FileDownload;");
+			while($board=$sql->fetch_array())
+			{ ?>
+				 <tbody>
+		            <tr>
+		              <td><?php echo $board['number']; ?></td>
+		              <td><?php echo $board['name']; ?></td>
+		              <td><?php echo $board['size']; ?></td>
+		              <td><?php echo $board['date']; ?></td>
+		            </tr>
+		        </tbody>
+		      <?php } ?>
+         
+          
         </table>
       </div>
     </main>
