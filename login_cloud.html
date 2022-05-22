@@ -1,131 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>login cloud - Bootsnipp.com</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-        .box {
-    width: 500px;
-    margin: 200px 0;
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sign up page</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <style>
+        /* Font link */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html {
+    height: 100%;
+    display: inline-flex;
 }
 
-.shape1{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    float: left;
-    margin-right: -50px;
-}
-.shape2 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    margin-top: -30px;
-    float: left;
-}
-.shape3 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    margin-top: -30px;
-    float: left;
-    margin-left: -31px;
-}
-.shape4 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    margin-top: -25px;
-    float: left;
-    margin-left: -32px;
-}
-.shape5 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    float: left;
-    margin-right: -48px;
-    margin-left: -32px;
-    margin-top: -30px;
-}
-.shape6 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    float: left;
-    margin-right: -20px;
-    margin-top: -35px;
-}
-.shape7 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    float: left;
-    margin-right: -20px;
-    margin-top: -57px;
-}
-.float {
-    position: absolute;
-    z-index: 2;
+body {
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+    background: linear-gradient(to bottom, rgba(247,247,247,1) 0%,rgba(164,175,199,1) 100%,rgba(157,169,195,1) 100%,rgba(125,185,232,1) 100%);
 }
 
-.form {
-    margin-left: 145px;
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: #000000;
 }
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    background-color:#D7D8DD;
+    box-shadow: 0 0 5px #D7D8DD;
+    width: 400px;
+    height: 545px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-input-data {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    margin: 10px 0 2px 0px;
+    
+}
+
+input[type=text] {
+    width: 353px;
+    height: 40px;
+    border: #413f3f solid 1px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color:#413f3f;
+}
+
+#Login-button {
+    width: 358px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(58,116,167,0.8) 49%,rgba(68,137,197,0.8) 77%,rgba(75,154,221,0.99) 99%,rgba(125,185,232,1) 100%);
+    opacity: 0.8;
+    color: #F7F2F2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.welcome {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #887C7C;
+    margin: 25px 0 7px 0;
+}
+
     </style>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="container">
-        <div id="login-row" class="row justify-content-center align-items-center">
-            <div id="login-column" class="col-md-6">
-                <div class="box">
-                    <div class="shape1"></div>
-                    <div class="shape2"></div>
-                    <div class="shape3"></div>
-                    <div class="shape4"></div>
-                    <div class="shape5"></div>
-                    <div class="shape6"></div>
-                    <div class="shape7"></div>
-                    <div class="float">
-                        <form class="form" action="">
-                            <div class="form-group">
-                                <label for="username" class="text-white">Username:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-white">Password:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<script type="text/javascript">
+    <body>
+        
+    <h1>
+        Create your account
+    </h1>
 
-</script>
-</body>
+    <div class="container">
+        <form>
+            <div class="form-input">
+                <p class=form-input-data>ID</p>
+                <input type="text" name="ID">
+
+                <p class=form-input-data>Password (6 or more characters)</p>
+                <input type="text" name="password">
+
+                </div>
+
+                <p class=welcome>Welcome</p>
+
+                <input id="Login-button" type="button" value="Log in">
+            </div>
+        </form>
+    </div>
+
+    </body>
 </html>

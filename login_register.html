@@ -1,139 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>로그인 / 회원가입 </title>
-    <link rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sign up page</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-    }
-    .wrap {
-        height: 100%;
-        width: 100%;
-        background-image: url(icon_images/background.jpg);
-        background-position: center;
-        background-size: cover;
-        position: absolute;
-    }
-    .form-wrap {
-        width: 380px;
-        height: 480px;
-        position: relative;
-        margin: 6% auto;
-        background: #fff;
-        padding: 5px;
-        overflow: hidden;
-    }
-    .button-wrap {
-        width: 230px;
-        margin: 35px auto;
-        position: relative;
-        box-shadow: 0 0 600px 9px #fcae8f;
-        border-radius: 30px;
-    }
-    .togglebtn {
-        padding: 10px 30px;
-        cursor: pointer;
-        background: transparent;
-        border: 0;
-        outline: none;
-        position: relative;
-    }
-    #btn {
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 110px;
-        height: 100%;
-        background: linear-gradient(to right, #ff105f, #ffad06);
-        border-radius: 30px;
-        transition: .5s;
-    }
-    .input-group {
-        top: 180px;
-        position: absolute;
-        width: 280px;
-        transition: .5s;
-    }
-    .input-field {
-        width: 100%;
-        padding: 10px 0;
-        margin: 5px 0;
-        border: none;
-        border-bottom: 1px solid #999;
-        outline: none;
-        background: transparent;
-    }
-    .submit {
-        width: 85%;
-        padding: 10px 30px;
-        cursor: pointer;
-        display: block;
-        margin: auto;
-        background: linear-gradient(to right, #ff105f, #ffad06);
-        border: 0;
-        outline: none;
-        border-radius: 30px;
-    }
-    .checkbox {
-        margin: 30px 10px 30px 0;
-    }
-    span {
-        color: #777;
-        font-size: 12px;
-        bottom: 68px;
-        position: absolute;
-    }
-    #login {
-        left: 50px;
-    }
-    #register {
-        left: 450px;
-    }
-</style>
-</head>
-<body>
-    <div class="wrap">
-         <div class="form-wrap">
-            <div class="button-wrap">
-                <div id="btn"></div>
-                <button type="button" class="togglebtn" onclick="login()">LOG IN</button>
-                <button type="button" class="togglebtn" onclick="register()">REGISTER</button>
-            </div>
-            <form id="login" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="User name or Email" required>
-                <input type="password" class="input-field" placeholder="Enter Password" required>
-                <input type="checkbox" class="checkbox"><span>Remember Password</span>
-                <button class="submit">Login</button>
-            </form>
-            <form id="register" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="User name or Email" required>
-                <input type="email" class="input-field" placeholder="Your Email" required>
-                <input type="password" class="input-field" placeholder="Enter Password" required>
-                <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
-                <button class="submit">REGISTER</button>
-            </form>
-        </div>
-    </div>
-    <script>
-        var x = document.getElementById("login");
-        var y = document.getElementById("register");
-        var z = document.getElementById("btn");
-            
-            
-        function login(){
-            x.style.left = "50px";
-            y.style.left = "450px";
-            z.style.left = "0";
-        }
+        /* Font link */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-        function register(){
-            x.style.left = "-400px";
-            y.style.left = "50px";
-            z.style.left = "110px";
-        }
-    </script>
-</body>
+html {
+    height: 100%;
+    display: inline-flex;
+}
+
+body {
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+    background: linear-gradient(to bottom, rgba(247,247,247,1) 0%,rgba(164,175,199,1) 100%,rgba(157,169,195,1) 100%,rgba(125,185,232,1) 100%);
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: #000000;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    background-color:#D7D8DD;
+    box-shadow: 0 0 5px #D7D8DD;
+    width: 400px;
+    height: 545px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-input-data {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    margin: 10px 0 2px 0px;
+    
+}
+
+input[type=text] {
+    width: 353px;
+    height: 40px;
+    border: #413f3f solid 1px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color:#413f3f;
+}
+
+.form-terms {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    align-self: flex-start;
+    margin: 20px 0 20px 0;
+}
+
+.form-terms label {
+    color: #887C7C;
+    align-self: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navy-blue {
+    color: #0E2248;
+}
+
+#create-account-button {
+    width: 353px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(58,116,167,0.8) 49%,rgba(68,137,197,0.8) 77%,rgba(75,154,221,0.99) 99%,rgba(125,185,232,1) 100%);
+    opacity: 0.8;
+    color: #F7F2F2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.have-account {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #887C7C;
+    margin: 25px 0 7px 0;
+}
+    </style>
+    <body>
+        
+    <h1>
+        Create your account
+    </h1>
+
+    <div class="container">
+        <form>
+            <div class="form-input">
+                <p class=form-input-data>ID</p>
+                <input type="text" name="ID">
+
+                <p class=form-input-data>Password (6 or more characters)</p>
+                <input type="text" name="password">
+
+                <div class="form-terms">
+                    <input type="checkbox" id="terms" name="terms"
+                    checked>
+                    <label for="terms">
+                        I agree to all <span class="navy-blue">Terms of Use</span> and <span class="navy-blue">Privacy Statement</span> 
+                    </label>
+                </div>
+
+                <input id="create-account-button" type="button" value="Create account">
+            </div>
+        </form>
+
+        
+    <p class="have-account">Already have an account? <span class="navy-blue">Log in</span></p>
+
+    </div>
+
+    </body>
+</html>
